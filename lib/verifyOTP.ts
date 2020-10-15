@@ -1,6 +1,6 @@
 import {generateTOTP} from './generateTOTP'
 
-export const verifyTOTP = (otp:number, secret:string, algorithm ='SHA-1', time:number=30000, window = 1, otpDigits:number =6) => {
+export const verifyTOTP = (otp:number, secret:string, algorithm ='sha1', time:number=30000, window:number = 0, otpDigits:number =6) => {
    if (Math.abs(+window) > 10) {
       console.error('Window size is too large');
       return false;
